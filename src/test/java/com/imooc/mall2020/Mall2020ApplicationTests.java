@@ -1,13 +1,21 @@
 package com.imooc.mall2020;
 
-import org.junit.jupiter.api.Test;
+import com.imooc.mall2020.dao.CategoryMapper;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 @SpringBootTest
-class Mall2020ApplicationTests {
+@RunWith(SpringRunner.class)
+public class Mall2020ApplicationTests {
+    @Autowired
+    private CategoryMapper categoryMapper;
 
     @Test
-    void contextLoads() {
+    public void contextLoads() {
+        System.out.println(categoryMapper.selectByPrimaryKey(100001));
     }
 
 }
