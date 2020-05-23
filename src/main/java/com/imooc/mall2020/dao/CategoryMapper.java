@@ -12,6 +12,8 @@ public interface CategoryMapper {
     @Select("select * from mall_category where id=#{id}")
     Category selectByPrimaryKey(@Param("id") Integer id);
 
+    Category selectById( Integer id);
+
 
 
 }

@@ -17,5 +17,9 @@ public class Mall2020ApplicationTests {
     public void contextLoads() {
         System.out.println(categoryMapper.selectByPrimaryKey(100001));
     }
+    @Test
+    public void contextLoads2() {
+        System.out.println(categoryMapper.selectById(100001));
+    }
 
 }
